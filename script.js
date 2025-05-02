@@ -70,13 +70,8 @@ document.getElementById("spin-btn").addEventListener("click", async () => {
     },
     body: JSON.stringify({ username: username, reward: "" })
   });
-  const result = await response.text();
-
-  if (result.trim() === "Tài khoản đã quay rồi.") {
-    msg.textContent = "Tài khoản này đã quay!";
-    msg.style.color = "red";
-    return;
-  }
+  // Bỏ kiểm tra phản hồi, luôn cho phép quay
+// const result = await response.text();
 
   // Phát nhạc
   const sound = document.getElementById("spin-sound");
