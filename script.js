@@ -60,18 +60,8 @@ document.getElementById("spin-btn").addEventListener("click", async () => {
   }
 
   // Kiểm tra tài khoản đã quay chưa
-  msg.textContent = "Đang kiểm tra tài khoản...";
-  msg.style.color = "#fff";
-
-  const response = await fetch("https://script.google.com/macros/s/AKfycbw2WWW5lWYuQCnQ4xjpzVDKcL1pYUnNONrNjK6gUirdBc8FLYqHFvBXssHnpnVQzul8IQ/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ username: username, reward: "" })
-  });
-  // Bỏ kiểm tra phản hồi, luôn cho phép quay
-// const result = await response.text();
+  
+  // Đã loại bỏ kiểm tra tài khoản trước khi quay
 
   // Phát nhạc
   const sound = document.getElementById("spin-sound");
